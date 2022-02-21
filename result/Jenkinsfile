@@ -9,10 +9,10 @@ pipeline {
 
 	stages{
 		stage("build"){
-			when {
+/*			when {
 				changeset "**/result/**"
 			}
-
+*/
 				steps{
 					echo 'Compiling result app'
 					dir('result'){
@@ -22,9 +22,10 @@ pipeline {
 		}
 
 		stage("test"){
-			when {
+		/*	when {
 				changeset "**/result/**"
 			}
+*/
 				steps{
 					echo 'Running Unit Tets on result app'
 					dir('result'){

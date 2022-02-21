@@ -52,11 +52,11 @@ pipeline {
 		}
 
 		failure{
-			slackSend (channel: "U02686KJAFQ", message: "Build Failed - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)")
+			slackSend (channel: "chuck-dev", message: "Build Failed - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)")
 		}
 
 		success{
-			slackSend (channel: "U02686KJAFQ", message: "Build Succeeded  - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)")
+			slackSend (channel: "chuck-dev", message: "Build Succeeded  - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)")
 		}
 	}
 }
